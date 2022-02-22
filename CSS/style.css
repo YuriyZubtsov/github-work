@@ -1,8 +1,8 @@
 body {
-    background-color:#e9f2ee; 
+    background-color:hsl(88, 60%, 52%); 
     font-family: Arial;
     line-height: 1.5;
-    font-size: 18px;   
+    font-size: 20px;   
 }
 
 .card {
