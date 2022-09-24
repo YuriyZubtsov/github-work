@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+.wrapper {
+  min-height: 100vh;
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.carousel {
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  height: 100px;
+  display: flex;
+}
+
+.carousel:hover .slide {
+  animation-play-state: paused;
+}
+
+.carousel::before,
+.carousel::after {
+  position: relative;
+  content: "";
+  height: 100%;
+  width: 200px;
+  background-color: aqua;
+  z-index: 1;
+  top: 0;
+}
+.carousel::before {
+  left: 0;
+}
+.carousel::after {
+  right: 0;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  animation: slideshow 30s linear infinite;
+}
+
+.slide__image {
+  height: calc(100% - 40px);
+  margin: 0 40px;
+}
+
+@keyframes slideshow {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
